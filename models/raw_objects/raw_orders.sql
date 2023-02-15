@@ -5,4 +5,4 @@
 }}
 
 
-select * from testdbt.test.orders
+select * from {{ source('testdbt', 'orders') }}

@@ -4,5 +4,5 @@
         )
     }}
 
-    select * from testdbt.test.product
+    select * from {{ source('testdbt', 'product') }}
  

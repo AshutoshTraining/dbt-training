@@ -3,4 +3,4 @@
         materialized='table'
     )
 }}
-select * from testdbt.test.customer
+select * from {{ source('testdbt', 'customer') }}
