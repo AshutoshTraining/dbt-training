@@ -16,10 +16,10 @@ select
     p.productname,
     p.category,
     p.subcategory,
-    {{ markup('ordersellingprice','ordercostprice') }} as profitperct,
-    d.delivery_team
+    {{ markup('ordersellingprice','ordercostprice') }} as profitperct
+  --  d.delivery_team
 from {{ ref("raw_orders") }} as o
 left join {{ ref("raw_customers") }} as c on o.customerid = c.customerid
 left join {{ ref("raw_products") }} as p on o.productid = p.productid
 left join {{ref("delivery_team")}} as d on o.shipmode= d.shipmode
-{{limit_data_in_dev('orderdate')}}
+--{{limit_data_in_dev('orderdate')}}
