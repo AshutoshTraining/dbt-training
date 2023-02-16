@@ -6,6 +6,7 @@ sources:
     schema : test
     tables :
       - name: customer
+        description: a clone of customer table
         columns: 
           - name: customerid
             tests:
@@ -14,6 +15,7 @@ sources:
       - name: orders
         columns:
           - name: orderid
+            description: primary key for orders
             tests:
               - unique
               - not_null          

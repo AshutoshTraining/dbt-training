@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: raw_customers
+    description: raw table for customers
     columns: 
       - name: customerid
         tests:
